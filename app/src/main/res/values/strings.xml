@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MontyMobileAssessmentApplication</string>
+    <string name="owner_avatar">Owner Avatar</string>
+    <string name="repo_name">Repository Name: %s</string>
+    <string name="created_at">Created At: %s</string>
+    <string name="stargazers_count">Stargazers Count: %s</string>
+    <string name="search">search</string>
+    <string name="retry">Retry</string>
+    <string name="error_message">Error message</string>
+</resources>
