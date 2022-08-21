@@ -13,6 +13,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.paging.LoadState
 import androidx.paging.filter
 import androidx.recyclerview.widget.ConcatAdapter
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.RecyclerView
 import com.mohammadjaber.montymobileassessmentapplication.R
 import com.mohammadjaber.montymobileassessmentapplication.presentation.paging_common.RepoLoadStateAdapter
@@ -68,6 +69,8 @@ class RepoListFragment : Fragment(), CustomClickListener {
         concatAdapter = pagingAdapter.withLoadStateFooter(loadStateAdapter)
         recyclerView.adapter = concatAdapter
 
+        val itemDecor = DividerItemDecoration(recyclerView.context, DividerItemDecoration.VERTICAL)
+        recyclerView.addItemDecoration(itemDecor)
 
         pagingAdapter.addLoadStateListener { loadStates ->
             binding.swipeRefreshLayout.isRefreshing = loadStates.refresh is LoadState.Loading
